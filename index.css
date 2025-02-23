@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --bg-color: #B0FFC1;
+    --navbar-color:#fdfdfd;
+    --text-color:#00985B;
+    --teks-color:#00492C;
+    --btn-color:#ffffff;
+    --card-color:#ffffff;
+}
+
+body{
+    min-height: 100vh;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    padding: 20px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color:transparent;
+}
+
+.logo{
+    color: var(--navbar-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+    margin-right: 140px;
+}
+
+nav a {
+    font-size: 18px;
+    color: var(--navbar-color);
+    text-decoration: none;
+    font-weight: medium;
+    margin-left: 105px;
+    transition: .3s;
+}
+
+.header img{
+    width: 50px;
+    margin-left: 3px;
+}
+
+.navbar a {
+    position: relative;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--navbar-color);
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+nav a.active{
+        font-weight: 650;
+        
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--navbar-color);
+}
+
+
+.btn-daftar{
+    margin-left:  110px;
+}
+
+.btn-daftar{
+    padding: 5px 40px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: 650;
+    color: var(--navbar-color);
+    border: 2px solid var(--btn-color);
+    transition: .3s;
+}
+
+.btn-daftar:hover{
+    background-color: var(--navbar-color);
+    border: 2px solid var(--btn-color);
+    color: var(--teks-color);
+}
+
+.btn-masuk{
+    padding: 5px 40px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: 650;
+    color: var(--teks-color);
+    border: 2px solid var(--btn-color);
+    background-color: var(--btn-color);
+    transition: .3s;
+    margin-right: 9px;
+}
+
+.btn-masuk:hover{
+    border: 2px solid var(--btn-color);
+    background-color: #0ec50e00;
+    color: var(--btn-color);
+}
+
+
+section{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*beranda*/
+.beranda{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-image: radial-gradient( circle 1251px at 30% 0%,  #27E350 0%, rgb(0, 0, 0) 90% );
+}
+.beranda .vektor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 156px;
+    margin-left: 625px;
+}
+.beranda .vektor .img-1 {
+    position: relative; 
+    width: 720px;
+    z-index: 2; 
+}
+
+.beranda .vektor .img-2 {
+    position: absolute; 
+    max-width: 100%;
+    margin-right: 300px;
+    margin-top: 300px;
+    z-index: 1; 
+}
+
+
+.beranda .fektor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beranda .fektor h1{
+    position: relative; 
+    z-index: 2; 
+    margin-left: 300px;
+}
+
+.beranda .fektor .img-layer{
+        position: absolute; 
+    z-index: 1; 
+}
+
+
+.hero-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 600px;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-content h1 {
+    position: relative;
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 84px;
+    z-index: 2;
+}
+
+.hero-content p {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 40px;
+    margin-left: 84px;
+    z-index: 2;
+}
+
+.vector {
+    position: absolute;
+    left: 0;
+    top: -180px;
+    width: 50%;
+    height: 50%;
+    background-size: contain;
+    z-index: 1;
+}
+
+
+
+.btn-arrow{
+    position: absolute;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: 650;
+    color: var(--teks-color);
+    border: 2px solid var(--btn-color);
+    background-color: var(--btn-color);
+    transition: .3s;
+    z-index: 3;
+    margin-left: 84px;
+}
+
+.btn-arrow:hover{
+    border: 2px solid var(--btn-color);
+    background-color: #0ec50e00;
+    color: var(--btn-color);
+}
+.chevron-icon {
+    font-size: 45px;
+    position: absolute;
+    margin-left: 270px;
+    margin-bottom: 200px;
+}
+
+
+
+
+
+
+/* Layanan */
+.layanan {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layanan h1{
+    font-size: 45px;
+    color: var(--text-color);
+}
+
+.layanan .paragraf{
+    width: 450px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.layanan .card-wrapper {
+    display: flex;             
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+
+.layanan .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 380px;
+    height: 250px;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    background-color: var(--text-color);
+    transform: translateY(-10px);
+}
+
+.layanan .card .image {
+    background-color: var(--text-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card:hover .image {
+    background-color: var(--card-color);
+}
+
+.card .image img {
+    width: 48px;
+}
+
+.layanan .card h3 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.layanan .card:hover h3{
+    color: white;
+}
+
+.card p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.layanan .card:hover p{
+    color: white;
+}
+
+.layanan-1{
+    background-image: url(elemen/background.png);
+}
+
+.layanan-2{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layanan-2 h1{
+    font-size: 45px;
+    color: var(--text-color);
+}
+
+
+
+.layanan-2 .home-container {
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+.home-content h2{
+    font-size: 30px;
+}
+
+.layanan-2 .home {
+    width: 380px;
+    background-color: var(--card-color);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0, 2);
+    margin: 20px;
+}
+
+.layanan-2 .home img {
+    width: 100%;
+    height: auto;
+    padding: 10px 10px;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+.home-content{
+    padding-left: 10px;
+}
+
+.home .icon-card{
+    padding: 20px 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .icon-card .icon-home1{
+    font-size: 30px;
+    font-family: "Poppins", serif;
+}
+
+.home .icon-card .icon-home2{
+    font-size: 30px;
+    padding-left: 85px;
+    font-family: "Poppins", serif;
+}
+
+.home .icon-card .icon-home3{
+    font-size: 30px;
+    padding-left: 85px;
+    font-family: "Poppins", serif;
+}
+
+.home .icon-card .text-cardd1{
+    
+    margin-right: 25px;
+    font-family: "Poppins", serif;
+}
+
+.home .icon-card .text-cardd2{
+    margin-right: 30px;
+    font-family: "Poppins", serif;
+}
+
+.home .icon-card .text-cardd3{
+
+    margin-right: 25px;
+    font-family: "Poppins", serif;
+}
+
+.card-text{
+    position: absolute;
+    display: flex;
+    margin-top: 60px;
+    font-size: 15px;
+}
