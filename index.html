@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Home</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image" href="{{asset ('landing/logo/Logo-DreamHome_1.png')}}">
+    <link rel="stylesheet" href="{{asset ('landing/index.css')}}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <header class="header">
-        <img src="logo/Logo-DreamHome_1.png" alt="">
+        <img src="{{asset ('landing/logo/Logo-DreamHome_1.png')}}" alt="">
         <a href="#" class="logo">Dream Home</a>
         <nav class="navbar">
             <a href="#beranda"  style="--i:12;"class="active">Beranda</a>
@@ -17,28 +19,25 @@
             <a href="#fitur" style="--i:14;">Fitur</a>
             <a href="#contact" style="--i:14;">Contact</a>
         </nav>
-
         <div class="btn">
-            <a href="" class="btn-daftar">Daftar</a>
-        </div>
-        <div class="btn">
-            <a href="" class="btn-masuk">Masuk</a>
+            <a href="{{url('register')}}" class="btn-daftar">Daftar</a>
+            <a href="{{url('/login')}}" class="btn-masuk">Masuk</a>
         </div>
     </header>
 
     <section class="beranda" id="beranda">
         <div class="hero-content">
-            <div class="vector"> <img src="elemen/layer1.png" alt=""></div>
+            <div class="vector"> <img src="{{asset ('landing/elemen/layer1.png') }}" alt=""></div>
             <div class="text-wrapper">
                 <h1>Membantu Temukan <br> Rumah Impian.</h1>
                 <p><strong>Dream Home</strong> hadir untuk temukan rumah terbaik untukmu, untuk dijual ataupun disewa dengan <br>sumber terpercaya.</p>  
-                    <a href="" class="btn-arrow">Temukan Rumah</a>
-                    <i class='bx bx-chevron-right chevron-icon'></i>
+                <a href="" class="btn-arrow">Temukan Rumah</a>
+                <i class='bx bx-chevron-right chevron-icon'></i>
             </div>
         </div>
         <div class="vektor">
-            <img src="elemen/vektor-home.png" alt="Gambar" class="img-1">
-            <img src="elemen/layer2.png" alt="gamabr1" class="img-2">
+            <img src="{{asset('landing/elemen/vektor-home.png')}}" alt="Gambar" class="img-1">
+            <img src="{{asset('landing/elemen/layer2.png')}}" alt="gamabr1" class="img-2">
         </div>
 
     </section>
@@ -48,18 +47,18 @@
         <p class="paragraf">Kami menyediakan beberapa layanan yang baik <br>untuk kebutuhan rumah impian anda</p>
 
         <div class="card-wrapper">            
-            <div class="card">
+            <div class="card-kontent">
                 <div class="image">
-                    <img src="elemen/house 1.png" alt="Kelas Khusus">
+                    <img src="{{asset('landing/elemen/house 1.png')}}" alt="Kelas Khusus">
                 </div>
                 <h3>Properti Baru</h3>
                 <p>Rumah impian kini jadi kenyataan,<br>
                 Beli rumah property dengan fasilitas terbaik <br> dengan lingkungan yang nyaman</p>
             </div>
 
-            <div class="card">
+            <div class="card-kontent">
                 <div class="image">
-                    <img src="elemen/sewa 1.png" alt="Kelas Khusus">
+                    <img src="{{asset('landing/elemen/sewa 1.png')}}" alt="Kelas Khusus">
                 </div>
                 <h3>Sewa Rumah</h3>
                 <p>Sewa rumah yang indah untuk keluarga <br>
@@ -67,9 +66,9 @@
                 tinggal keluarga anda</p>
             </div>
 
-            <div class="card">
+            <div class="card-kontent">
                 <div class="image">
-                    <img src="elemen/town 1.png" alt="Kelas Khusus">
+                    <img src="{{asset('landing/elemen/town 1.png')}}" alt="Kelas Khusus">
                 </div>
                 <h3>Beli Rumah</h3>
                 <p>Beli rumah sempurna dengan harga <br>terbaik kualitas terjamin dari<br>
@@ -78,38 +77,337 @@
         </div>
     </section>
     <section class="layanan-1" id="layanan">
+        <h1>Temukan Rumah Impianmu</h1>
+        <p>Sekarang anda dapat menghemat waktu dan biaya <br>tersembunyi dengan ratusan rumah untuk anda</p>
+        <div class="col-10 mx-auto">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item nav-atas" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Jual</button>
+            </li>
+            <li class="nav-item nav-atas-1" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Sewa</button>
+            </li>
+            <li class="nav-item nav-atas-2" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Property</button>
+            </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+
+            <!--Tipe Rumah-->
+            <div class="input-group input-cari mb-3">
+            <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="icon/rumah-icon.png" alt="">Tipe Rumah</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+            <!--Range Harga-->
+            <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="icon/uang-icon.png" alt=""> Range Harga</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Cari Berdasarkan Harga, ID, Property">
+            <button class="button-primary" type="button" id="button-addon2">Cari</button>
+            </div>
+
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">sewa</div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">jual</div>
+            </div>
+        </div>
 
     </section>
     <section class="layanan-2" id="layanan">
-        <h1>Rekomendasi Rumah</h1>
-        <div class="home-container">
-                <div class="home">
-                    <img src="elemen/rumah-1.png" alt="Kelas Khusus">
-                    <div class="home-content">
-                        <h2>IDR.250.000.000</h2>
-                        <p>JL. Mangkubumi NO. 11</p>
-                        <p style="color: red;">Jual</p>
-                    </div>
-                    <div class="icon-card">
-                        <i class='bx bxs-bed icon-home1'></i><h2>3</h2>
-                        <i class='bx bxs-bath icon-home2'></i><h2>4</h2>
-                        <i class='bx bxs-home icon-home3'></i><h2>460m</h2>
-                        <div class="card-text">
-                            <p class="text-cardd1">Kamar Mandi</p>
-                            <p class="text-cardd2">Kamar Tidur</p>
-                            <p class="text-cardd3">Luas Rumah</p>
+    <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 style="margin-top: 80px;">Rekomendasi Rumah</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card p-2">
+                        <img src="{{ asset('landing/elemen/rumah-1.png') }}" alt="">
+                        <div class="card-body">
+                            <h4>IDR.250.000.000</h4>
+                            <p class="mb-4 lh-sm">Jl. Mangkubumi No. 11 <br><span class="text-danger">Jual</span> </p>
+                        </div> 
+                        <div class="card-fasilitas d-flex justify-content-between px-4">
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bed.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bath.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-home.png') }}" class="image-icon" alt=""> 360m
+                                <p>Kamar Tidur</p>
+                            </span>
                         </div>
                     </div>
                 </div>
-        </div>
+                <div class="col-4">
+                    <div class="card p-2">
+                        <img src="{{ asset('landing/elemen/rumah-2.png') }}" alt="">
+                        <div class="card-body">
+                            <h4>IDR.250.000.000</h4>
+                            <p class="mb-4 lh-sm">Jl. Mangkubumi No. 11 <br><span class="text-danger">Jual</span> </p>
+                        </div> 
+                        <div class="card-fasilitas d-flex justify-content-between px-4">
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bed.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bath.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-home.png') }}" class="image-icon" alt=""> 360m
+                                <p>Kamar Tidur</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card p-2">
+                        <img src="{{ asset('landing/elemen/rumah-3.png') }}" alt="">
+                        <div class="card-body">
+                            <h4>IDR.250.000.000</h4>
+                            <p class="mb-4 lh-sm">Jl. Mangkubumi No. 11 <br><span class="text-danger">Jual</span> </p>
+                        </div> 
+                        <div class="card-fasilitas d-flex justify-content-between px-4">
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bed.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bath.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-home.png') }}" class="image-icon" alt=""> 360m
+                                <p>Kamar Tidur</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card p-2">
+                        <img src="{{ asset('landing/elemen/rumah-4.png') }}" alt="">
+                        <div class="card-body">
+                            <h4>IDR.250.000.000</h4>
+                            <p class="mb-4 lh-sm">Jl. Mangkubumi No. 11 <br><span class="text-danger">Jual</span> </p>
+                        </div> 
+                        <div class="card-fasilitas d-flex justify-content-between px-4">
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bed.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bath.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-home.png') }}" class="image-icon" alt=""> 360m
+                                <p>Kamar Tidur</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card p-2">
+                        <img src="{{ asset('landing/elemen/rumah-5.png') }}" alt="">
+                        <div class="card-body">
+                            <h4>IDR.250.000.000</h4>
+                            <p class="mb-4 lh-sm">Jl. Mangkubumi No. 11 <br><span class="text-danger">Jual</span> </p>
+                        </div> 
+                        <div class="card-fasilitas d-flex justify-content-between px-4">
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bed.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bath.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-home.png') }}" class="image-icon" alt=""> 360m
+                                <p>Kamar Tidur</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card p-2">
+                        <img src="{{ asset('landing/elemen/rumah-6.png') }}" alt="">
+                        <div class="card-body">
+                            <h4>IDR.250.000.000</h4>
+                            <p class="mb-4 lh-sm">Jl. Mangkubumi No. 11 <br><span class="text-danger">Jual</span> </p>
+                        </div> 
+                        <div class="card-fasilitas d-flex justify-content-between px-4">
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bed.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-bath.png') }}" class="image-icon" alt=""> 3
+                                <p>Kamar Tidur</p>
+                            </span>
+                            <span>
+                                <img src="{{ asset('landing/icon/icon-home.png') }}" class="image-icon" alt=""> 360m
+                                <p>Kamar Tidur</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>                    
+                <p class="text-center lihat">Lihat Lainnya....</p>
+            </div>
+    </div>
     </section>
 
     <section class="fitur" id="fitur">
-        <h1>Fitur</h1>
+    <div class="container position-relative">
+        <div class="row mb-4">
+            <div class="col-9">
+                <h2>Fitur Rumah</h2>
+            </div>
+            <div class="col-3">
+                <button class="button-fitur">Lihat Semua..
+                    <img src="{{ asset('landing/elemen/arrow white.png') }}" alt="" class="ms-2">
+                </button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-start">
+                    <div class="card-fitur me-3 position-relative">
+                        <img src="{{ asset('landing/fitur/ruang-tamu.png') }}" alt="">
+                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
+                            <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                                <h5>Ruang Tamu</h5>
+                                <span>Rumah Minimalis Type-12</span>
+                                <h6>IDR 170jt</h6>
+                                <button>Lihat Rumah</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-fitur me-3 position-relative">
+                        <img src="{{ asset('landing/fitur/kamar.png') }}" alt="">
+                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
+                            <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                                <h5>Kamar Tidur</h5>
+                                <span>Rumah Minimalis Type-A3</span>
+                                <h6>IDR 250jt</h6>
+                                <button>Lihat Rumah</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-fitur me-3 position-relative">
+                        <img src="{{ asset('landing/fitur/dapur.png') }}" alt="">
+                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
+                            <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                                <h5>Ruang Dapur</h5>
+                                <span>Rumah Minimalis Type-B1</span>
+                                <h6>IDR 120jt</h6>
+                                <button>Lihat Rumah</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-fitur me-3 position-relative">
+                        <img src="{{ asset('landing/fitur/kolam.png') }}" alt="">
+                        <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
+                            <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                                <h5>Kolam Renang</h5>
+                                <span>Rumah Minimalis Type-B3</span>
+                                <h6>IDR 450jt</h6>
+                                <button>Lihat Rumah</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button-arrow-left position-absolute start-0 top-50 translate-middle-y ">
+            <img src="{{ asset('landing/fitur/panah-kiri.png') }}" alt="">
+        </button>
+        <button class="button-arrow-right position-absolute end-0 top-50 translate-middle-y ">
+            <img src="{{ asset('landing/fitur/panah-kanan.png') }}" alt="">
+        </button>
+    </div>
     </section>
 
 
-    <section class="contact" id="contact"><h1>Test3</h1></section>
-    <script src="index.js"></script>
+    <section class="contact" id="contact">
+        <div class="contact-overlay">
+            <div class="container-kontak">
+                <div class="row container-isi-kontak">
+                    <div class="col-md-6">
+                        <h3>Butuh Konsutasi Rumah .. ?
+                        Silahkan Kontak kami <br>
+                        Kami siap membantu
+                        </h3>
+                        <div class="kontak">
+                            <h6>Kontak</h6>                           
+                            <div class="mb-3 d-flex">
+                                <img src="{{ asset('landing/conatct/alamat.png') }}" alt="">
+                                <a href="#">Jl. Pasukan Sindangkasih No. 02 Maja Seltan
+                                Kab. Majalengka</a>
+                            </div>                            
+                            <div class="mb-3">
+                                <img src="{{ asset('landing/conatct/telepon.png') }}" alt="">
+                                <a href="#">022-8285-9831</a>
+                            </div>
+                            <div class="mb-3">
+                                <img src="{{ asset('landing/conatct/mail.png') }}" alt="">
+                                <a href="#">dreamhome@gmail.com</a>
+                            </div>
+                        </div>
+                        <h6>Sosial Media</h6>
+                        <a href="#" class="me-3">
+                            <img src="{{ asset('landing/conatct/facebook.png') }}" alt="">
+                        </a>
+                        <a href="#" class="me-3">
+                            <img src="{{ asset('landing/conatct/ex.png') }}" alt="">
+                        </a>
+                        <a href="#" class="me-3">
+                            <img src="{{ asset('landing/conatct/instagram.png') }}" alt="">
+                        </a>
+                        <a href="#" class="rumah-impian">Rumah Impian</a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card-kontak w-100">
+                                <h2>Ada Pertanyaan?</h2>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control form-email" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Masukan email anda disini....</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control form-pertanyaan" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput">Pertanyaan anda....</label>
+                                </div>
+                                <button class="button-kontak"><a href="#">Kirim</a></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section>
+
+
+    <script src="{{asset  ('landing/index.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

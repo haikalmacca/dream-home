@@ -41,12 +41,15 @@ body{
     margin-right: 140px;
 }
 
+.navbar{
+    margin-right: 130px;
+}
+
 nav a {
     font-size: 18px;
     color: var(--navbar-color);
     text-decoration: none;
     font-weight: medium;
-    margin-left: 105px;
     transition: .3s;
 }
 
@@ -57,7 +60,7 @@ nav a {
 
 .navbar a {
     position: relative;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 .navbar a::before{
@@ -85,11 +88,6 @@ nav a.active {
     color: var(--navbar-color);
 }
 
-
-.btn-daftar{
-    margin-left:  110px;
-}
-
 .btn-daftar{
     padding: 5px 40px;
     text-decoration: none;
@@ -99,6 +97,7 @@ nav a.active {
     color: var(--navbar-color);
     border: 2px solid var(--btn-color);
     transition: .3s;
+    margin-right: 10px;
 }
 
 .btn-daftar:hover{
@@ -117,7 +116,7 @@ nav a.active {
     border: 2px solid var(--btn-color);
     background-color: var(--btn-color);
     transition: .3s;
-    margin-right: 9px;
+    margin-right: -3px;
 }
 
 .btn-masuk:hover{
@@ -156,29 +155,13 @@ section{
 
 .beranda .vektor .img-2 {
     position: absolute; 
-    max-width: 100%;
+    width: 500px;
     margin-right: 300px;
-    margin-top: 300px;
+    margin-bottom: 60px;
     z-index: 1; 
 }
 
 
-.beranda .fektor{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.beranda .fektor h1{
-    position: relative; 
-    z-index: 2; 
-    margin-left: 300px;
-}
-
-.beranda .fektor .img-layer{
-        position: absolute; 
-    z-index: 1; 
-}
 
 
 .hero-content {
@@ -263,6 +246,7 @@ section{
 
 .layanan h1{
     font-size: 45px;
+    font-weight: bold;
     color: var(--text-color);
 }
 
@@ -271,7 +255,7 @@ section{
     text-align: center;
     font-weight: 500;
     font-size: 18px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .layanan .card-wrapper {
@@ -281,7 +265,7 @@ section{
     flex-wrap: wrap;  
 }
 
-.layanan .card {
+.layanan .card-kontent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -291,16 +275,15 @@ section{
     height: 250px;
     background-color: var(--card-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.card:hover {
+.card-kontent:hover {
     background-color: var(--text-color);
     transform: translateY(-10px);
 }
 
-.layanan .card .image {
+.layanan .card-kontent .image {
     background-color: var(--text-color);
     width: 70px;
     height: 70px;
@@ -308,130 +291,396 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
-.card:hover .image {
+.card-kontent:hover .image {
     background-color: var(--card-color);
 }
 
-.card .image img {
+.card-kontent .image img {
     width: 48px;
 }
 
-.layanan .card h3 {
-    margin-bottom: 20px;
+.layanan .card-kontent h3 {
+    margin-top: 20px;
     color: black;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-.layanan .card:hover h3{
+.layanan .card-kontent:hover h3{
     color: white;
 }
 
-.card p {
+.card-kontent p {
     text-align: center;
     font-weight: 300;
     font-size: 14px;
+    margin-top: 10px;
 }
 
-.layanan .card:hover p{
+.layanan .card-kontent:hover p{
     color: white;
 }
 
+
+/*Layanan 1*/
 .layanan-1{
     background-image: url(elemen/background.png);
-}
-
-.layanan-2{
-    background-color: var(--bg-color);
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.layanan-2 h1{
+.layanan-1 h1{
     font-size: 45px;
+    color: var(--btn-color);
+    font-weight: bold;
+}
+.layanan-1 p{
+    font-size: 22px;
+    color: var(--btn-color);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.input-cari{
+    height: 60px;
+}
+
+.input-cari:focus{
+    border: none;
+}
+
+.input-cari .button-secondary{
+    border:none;
+    width: 200px;
+    background-color: var(--btn-color);
+    color: var(--text-color);
+    font-size: 15px;
+    border-radius:0 0 0 10px ;
+}
+
+.input-cari .button-primary{
+    background-color: var(--teks-color);
+    color: var(--btn-color);
+    border: none;
+    width: 80px;
+    font-size: 23px;
+    transition: .3s;
+    border-radius:0 10px 10px 0 ;
+}
+.input-cari .button-primary:hover{
+    background-color: var(--btn-color);
+    color: var(--teks-color);
+    border: 1px solid var(--teks-color);
+}
+
+.nav-atas{
+    border-radius: 10px 0 10px 0;
+    
+    background-color: #ffffff4f;
+}
+
+.nav-atas-1{
+    background-color: #ffffff4f;
+    color: black;
+}
+
+.nav-atas-2{
+    background-color: #ffffff4f;
+    color: black;
+    border-radius: 0 10px 0 0;
+}
+
+
+.layanan-1 .nav-tabs .nav-link{
+    color: #000;
+}
+.layanan-1 .nav-tabs .nav-link.active{
+    color: #00985B;
+}
+
+.nav-link .active{
+    background-color: white;
+    color: var(--teks-color);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--teks-color);
+}
+.col-10 {
+    margin-top: 20px;
+}
+
+
+/*Layanan 2*/
+.layanan-2{
+    background-color: var(--bg-color);
+    
+    flex-wrap: wrap;
+}
+
+.layanan-2 .col-12 h2{
+    color: var(--text-color);
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.layanan-2 .card{
+    background-color: var(--card-color);
+    width: 320px;
+    height: 430px;
+    border: none;
+    margin-left: 20px;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+.layanan-2 .card h4{
+    color: #000;
+    font-weight: 650;
+    font-size: 22px;
+    line-height: .8rem;
+}
+.layanan-2 .card-body p{
+    color: #011f06;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.layanan-2 .card:hover{
+    background: linear-gradient(170deg, var(--teks-color), #00985B, #00492C, #000);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    transition: all ease-in-out .3s;
+}
+
+.layanan-2 .card:hover .card-body h4 {
+    color: white;
+    transition: all ease-in-out .3s;
+}
+.layanan-2 .card:hover .card-body p {
+    color: white;
+    transition: all ease-in-out .3s;
+}
+
+.layanan-2 .card-fasilitas{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-weight: bold;
+    margin-top: 330px;
+}
+
+.layanan-2 .card-fasilitas span{
+    margin-top: 18px;
+}
+
+.layanan-2 .card-fasilitas p{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.layanan-2 .lihat{
+    text-align: center;
+    margin-bottom: 6%;
+    cursor: pointer;
+}
+
+
+
+/*Fitur*/
+.fitur{
+    background-color: var(--bg-color);
+    overflow: hidden;
+    padding:90px 0;
+}
+
+.button-fitur{
+    width: 238px;
+    height: 50px;
+    background-color: var(--text-color);
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.fitur .card-fitur{
+    width: 320px;
+    height: 440px;
+}
+
+.fitur .card-fitur img{
+    width: 320px;
+    height: 440px;
+
+}
+
+.fitur h2{
+    font-size: 46px;
+    font-weight: bold;
     color: var(--text-color);
 }
 
-
-
-.layanan-2 .home-container {
-    display: grid;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 0px;
+.fitur .card-fitur h5{
+    color: var(--btn-color);
+    font-size: 26px;
+    font-weight: 700;
 }
 
-.home-content h2{
-    font-size: 30px;
+.fitur .card-fitur span{
+    color: var(--btn-color);
+    font-size: 12px;
 }
 
-.layanan-2 .home {
-    width: 380px;
+.fitur .card-fitur h6{
+    color: var(--btn-color);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.fitur .card-fitur button{
+    background-color: #00985B;
+    color: var(--btn-color);
+    border: none;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.fitur .card-fitur .overlay{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all ease-in-out .3s;
+}
+.fitur .card-fitur .overlay:hover{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    cursor: default;
+}
+
+.button-arrow-left{
+    border: none;
+    border-radius: 50px;
+    width: 61px;
+    height: 61px;
+    background-color: var(--text-color);
+}
+.button-arrow-right{
+    border: none;
+    border-radius: 50px;
+    width: 61px;
+    height: 61px;
+    background-color: var(--text-color);
+}
+
+
+
+/*Contact*/
+.contact{
+    background: url(conatct/rumah.bg.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+.contact .contact-overlay{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 110px 0 110px 0;
+    overflow: hidden;
+}
+
+.contact .container-isi-kontak{
+    padding: 0 85px 0 83px;
+}
+
+.contact h3{
+    color: var(--navbar-color);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 69px;
+}
+
+.contact h6{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navbar-color);
+    margin: 19px 0 15px 0;
+}
+.contact a{
+    text-decoration: none;
+}
+
+.contact .kontak a{
+    font-style: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
+    color: var(--navbar-color);
+    margin-left: 12px;
+    width: 398px;
+    display: inline-block;
+}
+
+.contact .rumah-impian{
+    color: var(--navbar-color);
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.contact .card-kontak{
     background-color: var(--card-color);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0, 2);
-    margin: 20px;
+    width: 600px;
+    height: 485px !important;
+    border-radius: 6px;
+    padding: 72px 58px;
 }
 
-.layanan-2 .home img {
-    width: 100%;
-    height: auto;
-    padding: 10px 10px;
-    padding-left: 10px;
-    border-radius: 8px;
+.contact .card-kontak h2{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 21px;
 }
 
-.home-content{
-    padding-left: 10px;
+.contact .form-control{
+    background-color: #CCCACA;
+    height: 75px !important;
+    border-radius: 0;
 }
 
-.home .icon-card{
-    padding: 20px 10px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home .icon-card .icon-home1{
-    font-size: 30px;
-    font-family: "Poppins", serif;
-}
-
-.home .icon-card .icon-home2{
-    font-size: 30px;
-    padding-left: 85px;
-    font-family: "Poppins", serif;
-}
-
-.home .icon-card .icon-home3{
-    font-size: 30px;
-    padding-left: 85px;
-    font-family: "Poppins", serif;
-}
-
-.home .icon-card .text-cardd1{
+.contact .form-floating label{
+    color: #5F5E5E;
     
-    margin-right: 25px;
-    font-family: "Poppins", serif;
+
+}
+.contact .form-email{
+    border-radius: 10px 10px 0 0;
 }
 
-.home .icon-card .text-cardd2{
-    margin-right: 30px;
-    font-family: "Poppins", serif;
+.contact .button-kontak{
+    width: 100%;;
+    height: 75px;
+    background-color: var(--text-color);
+    color: var(--navbar-color);
+    border: none;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 0 0 10px 10px;
 }
 
-.home .icon-card .text-cardd3{
-
-    margin-right: 25px;
-    font-family: "Poppins", serif;
-}
-
-.card-text{
-    position: absolute;
-    display: flex;
-    margin-top: 60px;
-    font-size: 15px;
+.contact .button-kontak a{
+    color: var(--navbar-color);
 }
